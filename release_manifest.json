@@ -5,7 +5,7 @@
   "files": [
     {
       "path": ".github/workflows/checks.yml",
-      "sha256": "c3b9b3e84c458b325acf97f66bdc8c5d6475a9c9e9a4ed7e38dc9dd13d974180"
+      "sha256": "0b3f1bef5202a2e3c8c88f2a8f22cc7e8d92dca195ba729111f7f7649511f256"
     },
     {
       "path": ".gitignore",
@@ -21,7 +21,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "331c7749c8e49d3dd2fd627e472295c2755283b3f46a287837f209d49706267f"
+      "sha256": "685e08182778f6205226984c8b79da3086cbf9ec53a5f736f142bfcb86a03b87"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -3257,7 +3257,7 @@
     },
     {
       "path": "docs/VALIDATION.md",
-      "sha256": "1dfc61d99d456586a00f53bdfe7b388b4da82f4b3144cdd5b54bd2894e044086"
+      "sha256": "acaf40b70c23452b86dcd2efc715812bf982209f38a8a93948625afb740ab855"
     },
     {
       "path": "harness/collect_trm_arc_ttt_results.py",
@@ -3309,7 +3309,7 @@
     },
     {
       "path": "scripts/verify_package.py",
-      "sha256": "00c6b09211288a86917660d61fb77bb324bec7f7d5d0f9907b60ffa6d31a475e"
+      "sha256": "bc3f24afaa836ce2ac911da274c21196f3a976421f7732ae0e8f8d29f0ab7c72"
     },
     {
       "path": "source_manifest.json",
@@ -3322,6 +3322,10 @@
     {
       "path": "tests/test_trm_checkpoint.py",
       "sha256": "4b8a2698a8d88ce0a7384826511d61732eb76394b8592e06998b46f9e87381a4"
+    },
+    {
+      "path": "tests/test_verification_modes.py",
+      "sha256": "2c9c1cbd7225ddc6a6e656e459b40eb5dbfb27a6473f1f4ac57f095f2d21bc7d"
     },
     {
       "path": "vendor/trm/LICENSE",

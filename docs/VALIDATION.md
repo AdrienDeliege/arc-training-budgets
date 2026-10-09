@@ -6,7 +6,7 @@ This is a prepared code release candidate. It has not been publicly published an
 
 - All 800 bundled ARC-AGI-1 tasks agree exactly in content between the VARC task-per-file representation and the TRM challenge/solution representation. The training demonstrations total 1,302 pairs.
 - Source/data SHA-256 verification and syntax checks pass for every bundled Python source.
-- Seven standard-library test cases pass. An additional PyTorch checkpoint test passes all eight combinations of compiled/eager source and destination keys with unchanged/resized embeddings. They exercise all pretraining/TTT configurations through the native argument parsers or native TRM dry-run command builder, budget conversion, scratch/pretrained VARC routing, vote ties and task weighting, and side-effect-free release dry runs.
+- Eight standard-library test cases pass. An additional PyTorch checkpoint test passes all eight combinations of compiled/eager source and destination keys with unchanged/resized embeddings. They exercise all pretraining/TTT configurations through the native argument parsers or native TRM dry-run command builder, budget conversion, scratch/pretrained VARC routing, vote ties and task weighting, and side-effect-free release dry runs.
 - Both VARC and TRM pass reduced CPU forward/backward checks with PyTorch 2.7.0. VARC uses torchvision 0.22.0. Tests used Python 3.10, with those two wheels installed into a temporary directory; other smoke-test dependencies came from the existing local environment. This is not a clean installation test of every pinned requirement.
 - Reduced VARC pretraining, scratch TTT and pretrained TTT diagnostics completed. The scratch diagnostic completed dataset loading, two native passes for the diagnostic `--epochs 1`, inference, prediction saving and scoring on ARC task `00576224`. It used depth 1, width 32, four heads, patch size 8, one prediction view, no AMP and no compilation. The release scorer agrees with the native evaluator. These reduced settings do not validate the paper's performance figures.
 - Selecting a single scratch task preserves the original global file-index augmentation seed. For a non-first task, all 51 generated files matched the untouched archived generator byte-for-byte.
@@ -36,10 +36,14 @@ Useful next validation on Linux/CUDA: install each requirement file in a clean e
 The final package was checked again from a fresh ZIP extraction:
 
 - All 120 aggregate metric values match the camera-ready `main.tex` tables; all documentation links resolve.
-- Source/data integrity, Python syntax, paper-only code scope and all eight tests pass in the PyTorch environment. The checkpoint test is skipped when ML dependencies are absent.
+- Source/data integrity, Python syntax, paper-only code scope and all nine tests pass in the PyTorch environment. The checkpoint test is skipped when ML dependencies are absent.
 - Both model forward/backward smoke tests and all four figure routines pass; eight figure files are generated.
 - Reduced VARC pretraining, scratch TTT and pretrained TTT complete using ten inference views. Each TTT diagnostic records 204 training examples seen and 510 inference items; the independent release scorer agrees with native scoring.
 - Compiled/eager TRM checkpoint loading and mean-embedding resizing pass, including checks with actual reduced TRM model checkpoints.
 - The exact ZIP passes sensitive-identifier scans, normalized metadata checks, archive integrity and SHA-256 verification. Its README matches the current source folder.
 
 These are local release checks. Full CUDA training, a fresh installation of every dependency pin and reproduction of the historical GPU matrices remain unverified.
+
+## Repository checks versus archive integrity
+
+GitHub Actions runs `python scripts/verify_package.py --source-only`: frozen source/data hashes, Python syntax, ARC data consistency and result coverage remain checked, while documentation edits do not invalidate CI. The full `python scripts/verify_package.py` additionally enforces every hash in `release_manifest.json` and is used when packaging a release. The release manifest must be regenerated when building a new archive; an older published archive remains pinned to its original contents.
