@@ -1,0 +1,8 @@
+# Third-party notices
+
+- **VARC**, Keya Hu and contributors: https://github.com/lillian039/VARC. Bundled fork source in `vendor/varc/`, extracted from the frozen study source and narrowed to the paper's plain ViT. The upstream MIT license, retrieved on 9 October 2026, is preserved at `vendor/varc/LICENSE` (GitHub license blob `6b0dea533645ade312ded9d7c20c79a47ebd260c`). Existing copyright comments are retained.
+- **Tiny Recursive Models**, Samsung Electronics and contributors: https://github.com/SamsungSAILMontreal/TinyRecursiveModels. Frozen local study source in `vendor/trm/`; MIT license at `vendor/trm/LICENSE`. Its original Git commit is unavailable; source hashes pin the bundle. Local modifications present in the study snapshot are included.
+- **EVA positional embedding helpers**, Copyright (c) 2023 Beijing Academy of Artificial Intelligence (BAAI): https://github.com/baaivision/EVA. MIT-derived helpers in `vendor/varc/utils/pos_embed.py` retain their original header and reference to rotary-embedding-torch. The MIT permission text in `vendor/varc/LICENSE` applies with the copyright holder in that source header.
+- **ARC-AGI-1**, Copyright 2019 François Chollet: https://github.com/fchollet/ARC-AGI. Apache-2.0 license at `data/arc-agi-1/LICENSE`. The TRM-format challenge/solution files contain the same task content, verified against the task-per-file representation.
+
+The root MIT license applies to the authors' additions and new release tooling; it does not replace third-party copyright notices. Runtime libraries retain their own licenses and are installed as dependencies.

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv*/
+.pytest_cache/
+outputs/
+wandb/
+figures/
+*.pt
+*.pth
+data/arc-agi-1/data/eval_color_permute_ttt_*/
+vendor/trm/checkpoints/
+vendor/trm/outputs/
+vendor/trm/data/

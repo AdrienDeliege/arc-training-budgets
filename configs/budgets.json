@@ -1,0 +1,14 @@
+{
+  "pretraining": {
+    "v51_40m": {"variants": 51, "target_presentations": 40000000, "varc_epochs": 603, "trm_epochs": 30906, "trm_eval_interval": 5151},
+    "v51_130m": {"variants": 51, "target_presentations": 130000000, "varc_epochs": 1958, "trm_epochs": 100000, "trm_eval_interval": 10000},
+    "v1001_40m": {"variants": 1001, "target_presentations": 40000000, "varc_epochs": 31, "trm_epochs": 30906, "trm_eval_interval": 5151},
+    "v1001_130m": {"variants": 1001, "target_presentations": 130000000, "varc_epochs": 100, "trm_epochs": 100000, "trm_eval_interval": 10000}
+  },
+  "ttt": {
+    "v51_low": {"variants": 51, "varc_epochs": 100, "trm_epochs": 5100, "trm_warmup": 50},
+    "v51_high": {"variants": 51, "varc_epochs": 1962, "trm_epochs": 100100, "trm_warmup": 200},
+    "v1001_low": {"variants": 1001, "varc_epochs": 4, "trm_epochs": 5100, "trm_warmup": 50},
+    "v1001_high": {"variants": 1001, "varc_epochs": 100, "trm_epochs": 100100, "trm_warmup": 200}
+  }
+}

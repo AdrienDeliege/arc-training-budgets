@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying BNAIC/BeNeLearn 2026 paper when using this code."
+title: "Pretraining and Test-Time Training Budgets Matter for ARC: A Controlled Study of VARC and TRM"
+type: software
+authors:
+  - family-names: "Deliège"
+    given-names: "Adrien"
+    orcid: "https://orcid.org/0000-0003-3981-6982"
+  - family-names: "Van Droogenbroeck"
+    given-names: "Marc"
+    orcid: "https://orcid.org/0000-0001-6260-6487"
+license: MIT
