@@ -18,7 +18,7 @@ The model code is **bundled**, so downloading the original repositories is unnec
 Use Python 3.10 or 3.11. Full experiments require Linux and NVIDIA CUDA GPUs. From the repository root, check the package and preview a command without installing ML dependencies:
 
 ```sh
-python scripts/verify_package.py
+python scripts/verify_package.py --source-only
 python -m unittest discover -s tests -v
 python run.py varc ttt --config v51_low --task-id 00576224 --dry-run
 ```

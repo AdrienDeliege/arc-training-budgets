@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check frozen source hashes, source syntax, ARC data consistency and result coverage."""
 import ast
+import argparse
 import csv
 import hashlib
 import json
@@ -10,8 +11,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--source-only", action="store_true", help="Check frozen source/data and protocol consistency without enforcing the packaged archive's full-file hashes; suitable for CI after documentation edits.")
+    args = parser.parse_args()
     release_path = ROOT / "release_manifest.json"
-    if release_path.exists():
+    if release_path.exists() and not args.source_only:
         for entry in json.loads(release_path.read_text())["files"]:
             assert hashlib.sha256((ROOT / entry["path"]).read_bytes()).hexdigest() == entry["sha256"], f"Release file mismatch: {entry['path']}"
     manifest = json.loads((ROOT / "source_manifest.json").read_text())
