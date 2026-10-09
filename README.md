@@ -50,7 +50,7 @@ Package checks and reduced model diagnostics passed. Full GPU matrices have not 
 ```bibtex
 @inproceedings{deliege2026trainingbudgets,
   title = {Pretraining and Test-Time Training Budgets Matter for {ARC}: A Controlled Study of {VARC} and {TRM}},
-  author = {Deli\`ege, Adrien and Van Droogenbroeck, Marc},
+  author = {Deliege, Adrien and Van Droogenbroeck, Marc},
   year = {2026},
   booktitle = {BNAIC/BeNeLearn}
 }
